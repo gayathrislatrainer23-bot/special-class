@@ -127,3 +127,39 @@ console.log("29:",arr29)
 let arr30 =[3, 6, 9, 12, 15];
 arr30[3]=7
 console.log("30:",arr30)
+
+
+let fruits = ["apple", "banana", "grapes"];
+
+// for (let fruit of fruits) {
+//   console.log(fruit);
+
+// }
+
+// for (let index in fruits) {
+//   console.log(fruits[index]);
+
+// }
+
+// fruits.forEach(function(fruit) {
+//   console.log(fruit);
+// });
+// map
+
+
+
+// fruits.map(function(fruit) {
+//   console.log(fruit);
+// });
+let output=fruits.filter((fruit)=>(fruit === "grapes") )
+console.log(output)
+let num= [1,2,3,56,34,7,9]
+let even = num.filter((num)=>num%2 === 0)
+console.log(even)
+
+const fruits2 = ["apple", "banana", "cherry"];
+fruits2.splice(1, 1, "mango"); // removes 1 from index 1, adds "mango"
+console.log(fruits2); // ["apple", "mango", "cherry"]
+
+const arr = [1, [2, 3], [4, 5]];
+console.log(arr.flat()); // [1, 2, 3, 4, 5]
