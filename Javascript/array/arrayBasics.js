@@ -97,8 +97,17 @@ arr22.push(7)
 console.log("22:",arr22)
 // Replace the last occurrence of 8 with 80 in the array [8, 16, 24, 8, 32].
 let arr23 =[8, 16, 24, 8, 32];
-let index23=arr23.lastIndexOf(8)
-console.log("23:",index23)
+// let index23=arr23.lastIndexOf(8)
+// console.log("23:",index23)
+let index23 =0;
+for(let i=0;i<arr23.length;i++){
+  if(arr23[i]=== 8){
+index23=i
+  }
+  
+}
+arr23[index23] =80
+console.log("23",arr23)
 // Given the array [2, 4, 6, 8, 10], insert 5 between 4 and 6.
 let arr24 = [2, 4, 6, 8, 10];
 arr24.splice(2,0,5)
