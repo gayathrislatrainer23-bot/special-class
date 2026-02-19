@@ -6,6 +6,7 @@ const token = await jwt.sign( 'jwtkey', { expiresIn: 60 * 60 });
 
 res.status(201).json({
     msg:"login Sucess",
+    token
   
 })
 }
