@@ -106,5 +106,31 @@ function seconLargest(arr){
 
 }
 
-console.log(seconLargest([30,40,50,60]))
+// console.log(seconLargest([30,40,50,60]))
 
+
+let arr12 = [0,0,67,23,0,0,45,0,34,0]
+
+for(let i=arr12.length-1;i>=0;i--){
+    if(arr12[i]===0){
+    for(let j=0;j<i;j++){
+    // for(let j=i-1;j>=0;j--){
+            let temp;
+            if(arr12[j]!== 0){
+                temp =arr12[j];
+                arr12[j]=arr12[i]
+                arr12[i]=temp
+                break;
+            }
+        }
+    }
+}
+console.log('arr12',arr12)
+// empty an array
+let arr13 = [5,3,45]
+// arr13 =[]
+// arr13.length = 0
+
+// for(let i =0;i<arr13.length;i++){
+
+// }
