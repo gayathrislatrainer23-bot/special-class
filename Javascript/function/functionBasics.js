@@ -134,3 +134,60 @@ let arr13 = [5,3,45]
 // for(let i =0;i<arr13.length;i++){
 
 // }
+
+
+function moveZeroToEnd(arr){
+    let j = arr.length-1
+    for (let i=0;i<arr.length;i++){
+           while (arr[j] === 0 && i < j) {
+                j--;
+            }
+        if(arr[i] === 0){
+        if(arr[j] !== 0  && i < j  ){
+           let temp ;
+           temp = arr[j]
+           arr[j] = arr[i]
+            arr[i] =temp
+
+           
+         }
+         j--;
+        }
+    }
+    return arr
+}
+
+
+
+console.log(moveZeroToEnd([0,30,0,3,0,3]))
+let arr15=[2,30,0,3,9,9]
+
+   for (let i=0;i<arr15.length;i++){
+       for(j=arr15.length-1;j>i;j--){
+     if(arr15[i]=== 0){
+            if(arr15[j] !== 0){
+
+                let temp ;
+            temp = arr15[j]
+            arr15[j] = arr15[i]
+             arr15[i] =temp
+            }
+        }
+     }
+   }
+// find the index of 2 elements  whose sum equal to target
+
+function findSumOfElements(arr,target){
+    for(let i =0; i<arr.length-1;i++){
+        for(j=i+1;j<arr.length;j++){
+            if(arr[i]+arr[j]=== target){
+                 return [i,j]
+               
+            }
+        }
+    }
+     return 'no elements'
+}
+
+let r = findSumOfElements([2,4,6,9],11)
+ console.log(r)
